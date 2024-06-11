@@ -138,5 +138,14 @@ input::placeholder {
 }
 
 .err__msg {
-  display: none;
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 1.19rem;
+  color: #ff7979;
+  text-align: right;
+  font-size: 0.6875rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  /* display: none; */
 }

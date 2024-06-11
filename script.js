@@ -1,7 +1,10 @@
 const firstName = document.querySelector("#firstName");
+const firstNameError = document.querySelector(".firstName__err");
 const lastName = document.querySelector("#firstName");
+const lastNameError = document.querySelector(".lastName__err");
 const email = document.querySelector("#firstName");
+const emailError = document.querySelector('.email__err')
 const password = document.querySelector("#firstName");
+const passwordError = document.querySelector('.password__err')
 const submitBtn = document.querySelector(".cta__btn");
-
-
+const errorMsg = document.querySelectorAll(".err__msg");
