@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Learn to code by watching others</h1>
+        <p class="subheader">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable
+        </p>
+      </header>
+
+      <main>
+        <h3>Try it free 7 days <span>then $20/mo. thereafter</span></h3>
+        <form class="contact__form">
+          <input
+            type="text"
+            id="firstName"
+            name="firstname"
+            placeholder="First Name"
+          />
+          <p class="firstName__err err__msg">First Name cannot be empty</p>
+
+          <input
+            type="text"
+            id="lastName"
+            name="lastname"
+            placeholder="Last Name"
+          />
+          <p class="lastName__err err__msg">Last Name cannot be empty</p>
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+          />
+          <p class="email__err err__msg">Looks like this is not an email</p>
+
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+          <p class="password err__msg">Password cannot be empty</p>
+
+          <button class="cta__btn">CLAIM YOUR FREE TRIAL</button>
+          <p class="terms">
+            By clicking the button, you are agreeing to our
+            <span class="terms__txt">Terms and Services</span>
+          </p>
+        </form>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
