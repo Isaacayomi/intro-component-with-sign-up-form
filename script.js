@@ -1,3 +1,4 @@
+const inputs = document.querySelectorAll("input");
 const firstNameInput = document.querySelector("#firstName");
 const firstNameError = document.querySelector(".firstName__err");
 const lastNameInput = document.querySelector("#lastName");
@@ -9,39 +10,56 @@ const passwordError = document.querySelector(".password__err");
 const submitBtn = document.querySelector(".cta__btn");
 const errorMsg = document.querySelectorAll(".err__msg");
 
+const handleFieldError = (inputEl, errorEl, errorMsg = "") => {
+  if (inputEl.value.trim().length === 0) {
+    errorEl.style.display = "block";
+    inputEl.style.border = "1px solid #ff7a7a";
+  } else {
+    errorEl.style.display = "none";
+    inputEl.style.border = "1px solid #dedede";
+  }
+  if (errorMsg) {
+    errorEl.textContent = errorMsg;
+  }
+};
+
 const validateFields = () => {
-  if (firstNameInput.value.trim().length === 0) {
-    firstNameError.style.display = "block";
-    firstNameInput.style.border = "1px solid #ff7a7a";
-  } else {
-    firstNameError.style.display = "none";
-    firstNameInput.style.border = "1px solid #dedede ";
-    console.log("correct details");
+  handleFieldError(firstNameInput, firstNameError);
+  handleFieldError(lastNameInput, lastNameError);
+  handleFieldError(password, passwordError);
+
+  if (password.value.includes(" ")) {
+    handleFieldError(
+      password,
+      passwordError,
+      "Password cannot include empty spaces"
+    );
   }
 
-  if (lastNameInput.value.trim().length === 0) {
-    lastNameInput.style.border = "1px solid #ff7a7a";
-    lastNameError.style.display = "block";
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (!email.value.match(mailformat)) {
+    emailError.style.display = "block";
+    email.style.border = "1px solid #ff7a7a";
   } else {
-    lastNameError.style.display = "none";
-    lastNameInput.style.border = "1px solid #dedede ";
-    console.log("correct details2");
+    emailError.style.display = "none";
+    email.style.border = "1px solid #dedede";
   }
-
-  if (password.value.trim().length === 0) {
-    passwordError.style.display = "block";
-    password.style.border = "1px solid #ff7a7a";
-  } else {
-    passwordError.style.display = "none";
-    password.style.border = "1px solid #dedede ";
-    console.log("correct details4");
-  }
+  return;
 };
 
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   validateFields();
-  document.querySelectorAll("input").forEach(function (i) {
-    i.value = " ";
-  });
+
+  if (
+    firstNameError.style.display === "none" &&
+    lastNameError.style.display === "none" &&
+    emailError.style.display === "none" &&
+    passwordError.style.display === "none"
+  ) {
+    firstNameInput.value = "";
+    lastNameInput.value = "";
+    email.value = "";
+    password.value = "";
+  }
 });
