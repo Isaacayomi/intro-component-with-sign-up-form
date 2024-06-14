@@ -34,37 +34,49 @@
       <main>
         <h3>Try it free 7 days <span>then $20/mo. thereafter</span></h3>
         <form class="contact__form">
-          <input
-            type="text"
-            id="firstName"
-            name="firstname"
-            placeholder="First Name"
-          />
-          <p class="firstName__err err__msg">First Name cannot be empty</p>
+          <div class="input__field first">
+            <input
+              type="text"
+              id="firstName"
+              name="firstname"
+              placeholder="First Name"
+            />
 
-          <input
-            type="text"
-            id="lastName"
-            name="lastname"
-            placeholder="Last Name"
-          />
-          <p class="lastName__err err__msg">Last Name cannot be empty</p>
+            <p class="firstName__err err__msg">First Name cannot be empty</p>
+          </div>
 
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email Address"
-          />
-          <p class="email__err err__msg">Looks like this is not an email</p>
+          <div class="input__field">
+            <input
+              type="text"
+              id="lastName"
+              name="lastname"
+              placeholder="Last Name"
+            />
 
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Password"
-          />
-          <p class="password__err err__msg">Password cannot be empty</p>
+            <p class="lastName__err err__msg">Last Name cannot be empty</p>
+          </div>
+
+          <div class="input__field">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+            />
+
+            <p class="email__err err__msg">Looks like this is not an email</p>
+          </div>
+
+          <div class="input__field">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
+
+            <p class="password__err err__msg">Password cannot be empty</p>
+          </div>
 
           <button class="cta__btn">CLAIM YOUR FREE TRIAL</button>
           <p class="terms">

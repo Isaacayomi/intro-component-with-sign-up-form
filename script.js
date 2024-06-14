@@ -18,6 +18,8 @@ const handleFieldError = (inputEl, errorEl, errorMsg = "") => {
     errorEl.style.display = "none";
     inputEl.style.border = "1px solid #dedede";
   }
+
+  // If errorMsg is present among the arguments below, change the text content
   if (errorMsg) {
     errorEl.textContent = errorMsg;
   }
@@ -29,20 +31,19 @@ const validateFields = () => {
   handleFieldError(password, passwordError);
 
   if (password.value.includes(" ")) {
-    handleFieldError(
-      password,
-      passwordError,
-      "Password cannot include empty spaces"
-    );
+    handleFieldError(password, passwordError, "Password cannot be empty");
   }
 
   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (!email.value.match(mailformat)) {
     emailError.style.display = "block";
     email.style.border = "1px solid #ff7a7a";
+    email.setAttribute("placeholder", "email@example.com");
   } else {
     emailError.style.display = "none";
     email.style.border = "1px solid #dedede";
+    email.setAttribute("placeholder", "Email Address");
+
   }
   return;
 };
