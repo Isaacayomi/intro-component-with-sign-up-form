@@ -159,60 +159,32 @@ input::placeholder {
   display: none;
 }
 
-@media screen and (min-width: 1024px) {
-  body {
-    display: grid;
-    height: 100vh;
-    place-content: center;
-  }
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  header h1 {
-    max-width: 32.8125rem;
-    width: 100%;
-    text-align: left;
-    font-size: 3.125rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 3.4375rem;
-    letter-spacing: -0.03256rem;
-  }
-
+@media screen and (min-width: 768px) {
+  header h1,
   header .subheader {
     max-width: 32.8125rem;
     width: 100%;
-    text-align: left;
-    font-size: 1rem;
-    font-style: lighter;
-    font-weight: 500;
-    line-height: 1.625rem;
   }
 
-  h3 {
-    max-width: 33.75rem;
-    width: 100%;
-    margin-top: 4.81rem;
-  }
-
+  h3,
   .contact__form {
     max-width: 33.75rem;
     width: 100%;
   }
 
+  h3 {
+    margin-top: 4.81rem;
+  }
+
   .contact__form input {
     max-width: 28.75rem;
-    width: 90%;
+    width: 100%;
     margin-inline: auto;
   }
 
   .err__msg {
     max-width: 28.75rem;
     width: 100%;
-    padding-right: 1.8rem;
   }
 
   .cta__btn {
@@ -224,6 +196,47 @@ input::placeholder {
     max-width: 22.9385rem;
     width: 100%;
     margin-top: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header h1 {
+    text-align: left;
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.4375rem;
+    letter-spacing: -0.03256rem;
+  }
+
+  header .subheader {
+    text-align: left;
+    font-size: 1rem;
+    font-style: lighter;
+    font-weight: 500;
+    line-height: 1.625rem;
+  }
+
+  .contact__form input {
+    max-width: 28.75rem;
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .err__msg {
+    width: 90%;
   }
 }
 
