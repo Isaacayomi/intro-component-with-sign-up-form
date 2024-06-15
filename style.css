@@ -94,6 +94,10 @@ h3 span {
   background: #fff;
 }
 
+.contact__form input:focus {
+  border: 1px solid #5e54a4;
+}
+
 input::placeholder {
   color: hsla(249, 10%, 26%, 75%);
   font-size: 0.875rem;
